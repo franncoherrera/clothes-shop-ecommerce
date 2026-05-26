@@ -2,6 +2,9 @@
   <h1>👕 Clothes Shop</h1>
   <p>E-commerce de ropa construido con <strong>Next.js 16</strong>, <strong>TypeScript</strong> y <strong>Prisma</strong></p>
   <p>
+    <a href="https://clothes-shop-ecommerce.vercel.app/">
+      <img src="https://img.shields.io/badge/Demo-Vercel-000?logo=vercel" alt="Demo en Vercel">
+    </a>
     <img src="https://img.shields.io/badge/Next.js-16-black" alt="Next.js 16">
     <img src="https://img.shields.io/badge/TypeScript-5-blue" alt="TypeScript">
     <img src="https://img.shields.io/badge/Prisma-6-2D3748" alt="Prisma">
@@ -9,6 +12,10 @@
     <img src="https://img.shields.io/badge/PostgreSQL-15-4169E1" alt="PostgreSQL">
   </p>
 </div>
+
+##  DEMO
+
+https://clothes-shop-ecommerce.vercel.app/
 
 ## ✨ Características
 
