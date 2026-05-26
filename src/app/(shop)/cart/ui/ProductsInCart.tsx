@@ -56,7 +56,7 @@ export const ProductsInCart = () => {
 
             <button
               onClick={() => removeProduct(product)}
-              className="underline mt-3"
+              className="underline mt-3 cursor-pointer"
             >
               Remover
             </button>

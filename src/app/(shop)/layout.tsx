@@ -13,7 +13,7 @@ export default function ShopLayout({
         <BannerPromoCarousel />
         <TopMenu />
         <Sidebar />
-        <div className="px-0 pl-10 pr-10">{children}</div>
+        <div className="px-0">{children}</div>
         <Footer />
       </main>
     </BreakpointProvider>

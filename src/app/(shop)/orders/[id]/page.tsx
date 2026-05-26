@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import { redirect } from 'next/navigation';
+import Image from "next/image";
+import { redirect } from "next/navigation";
 
-import { getOrderById } from '@/actions/order/get-order-by-id';
-import { OrderStatus, PayPalButton, Title } from '@/components';
-import { currencyFormat } from '@/utils/currencyFormat';
+import { getOrderById } from "@/actions/order/get-order-by-id";
+import { OrderStatus, PayPalButton, Title } from "@/components";
+import { currencyFormat } from "@/utils/currencyFormat";
 
 interface Props {
   params: {
@@ -14,30 +14,26 @@ interface Props {
 export default async function OrdersByIdPage({ params }: Props) {
   const { id } = await params;
 
-  // Todo: Llamar el server action
-
   const { ok, order } = await getOrderById(id);
 
   if (!ok) {
-    redirect('/');
+    redirect("/");
   }
 
   const address = order!.OrderAddress;
 
   return (
-    <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
+    <div className="flex justify-center items-center mb-72 px-5 sm:px-0">
       <div className="flex flex-col w-250">
-        <Title title={`Orden #${id.split('-').at(-1)}`} />
+        <Title title={`Orden #${id.split("-").at(-1)}`} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {/* Carrito */}
           <div className="flex flex-col mt-5">
             <OrderStatus isPaid={order?.isPaid ?? false} />
 
-            {/* Items */}
             {order!.OrderItem.map((item) => (
               <div
-                key={item.product.slug + '-' + item.size}
+                key={item.product.slug + "-" + item.size}
                 className="flex mb-5"
               >
                 <Image
@@ -45,8 +41,8 @@ export default async function OrdersByIdPage({ params }: Props) {
                   width={100}
                   height={100}
                   style={{
-                    width: '100px',
-                    height: '100px',
+                    width: "100px",
+                    height: "100px",
                   }}
                   alt={item.product.title}
                   className="mr-5 rounded"
@@ -65,7 +61,6 @@ export default async function OrdersByIdPage({ params }: Props) {
             ))}
           </div>
 
-          {/* Checkout - Resumen de orden */}
           <div className="bg-white rounded-xl shadow-xl p-7">
             <h2 className="text-2xl mb-2">Dirección de entrega</h2>
             <div className="mb-10">
@@ -81,7 +76,6 @@ export default async function OrdersByIdPage({ params }: Props) {
               <p>{address!.phone}</p>
             </div>
 
-            {/* Divider */}
             <div className="w-full h-0.5 rounded bg-gray-200 mb-10" />
 
             <h2 className="text-2xl mb-2">Resumen de orden</h2>
@@ -90,7 +84,7 @@ export default async function OrdersByIdPage({ params }: Props) {
               <span>No. Productos</span>
               <span className="text-right">
                 {order?.itemsInOrder === 1
-                  ? '1 artículo'
+                  ? "1 artículo"
                   : `${order?.itemsInOrder} artículos`}
               </span>
 
