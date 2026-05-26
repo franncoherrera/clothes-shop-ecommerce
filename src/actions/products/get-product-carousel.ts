@@ -1,5 +1,5 @@
-import { Gender } from '@/generated/prisma';
 import prisma from '@/lib/prisma';
+import { Gender } from '@prisma/client';
 
 interface CarouselOptions {
   numberOfProducts?: number;
