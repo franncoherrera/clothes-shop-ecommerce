@@ -1,11 +1,11 @@
+import { getProductsCarouselByNumber } from "@/actions/products/get-product-carousel";
+import { BannerCarousel } from "@/components/common/banners/BannerCarousel";
+import { BannerCategories } from "@/components/common/banners/BannerCategories";
+import { BannerMessage } from "@/components/common/banners/BannerMessage";
+import { ProductCarousel } from "@/components/product/product-carousel/ProductCarousel";
+
 export const revalidate = 60;
-import { getProductsCarouselByNumber } from "@/actions";
-import {
-  BannerCarousel,
-  BannerCategories,
-  BannerMessage,
-  ProductCarousel,
-} from "@/components";
+
 
 interface Props {
   searchParams: {

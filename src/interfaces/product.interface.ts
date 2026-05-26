@@ -8,6 +8,7 @@ export interface Product {
   slug: string;
   tags: string[];
   title: string;
+  //todo: type: Type;
   gender: Category;
 }
 
@@ -21,10 +22,14 @@ export interface CartProduct {
   image: string;
 }
 
-export type Category = "men" | "women" | "kid" | "unisex";
-export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
-export type Type = "shirts" | "pants" | "hoodies" | "hats";
 
-export interface Data {
-  products: Product[];
+export interface ProductImage {
+  id: number;
+  url: string;
+  productId: string;
 }
+
+
+type Category = 'men'|'women'|'kid'|'unisex';
+export type Size = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
+export type Type = 'shirts'|'pants'|'hoodies'|'hats';

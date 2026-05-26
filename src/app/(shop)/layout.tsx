@@ -1,5 +1,6 @@
-import { BannerPromoCarousel, Footer, Sidebar, TopMenu } from "@/components";
-import { BreakpointProvider } from "@/hooks";
+import { Footer, Sidebar, TopMenu } from '@/components';
+import { BannerPromoCarousel } from '@/components/common/banners/BannerPromoCarousel';
+import { BreakpointProvider } from '@/hooks';
 
 export default function ShopLayout({
   children,
@@ -12,7 +13,7 @@ export default function ShopLayout({
         <BannerPromoCarousel />
         <TopMenu />
         <Sidebar />
-        <div className="px-0">{children}</div>
+        <div className="px-0 pl-10 pr-10">{children}</div>
         <Footer />
       </main>
     </BreakpointProvider>

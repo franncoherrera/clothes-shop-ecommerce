@@ -1,5 +1,5 @@
-import { Gender } from "@/generated/prisma";
-import prisma from "@/lib/prisma";
+import { Gender } from '@/generated/prisma';
+import prisma from '@/lib/prisma';
 
 interface CarouselOptions {
   numberOfProducts?: number;
@@ -27,12 +27,12 @@ export const getProductsCarouselByNumber = async ({
     });
 
     return {
-      products: products.map((product) => ({
+      products: products.map((product: any) => ({
         ...product,
-        images: product.ProductImage.map((image) => image.url),
+        images: product.ProductImage.map((image: any) => image.url),
       })),
     };
   } catch (e) {
-    throw new Error("No se pudo cargar los productos");
+    throw new Error('No se pudo cargar los productos');
   }
 };

@@ -1,5 +1,10 @@
-import PageNotFound from "@/components/ui/not-found/PageNotFound";
+import { PageNotFound } from '@/components';
 
-export default function NotFoundPageProductBySlug() {
-  return <PageNotFound />;
+
+export default function NotFoundPageBySlug() {
+
+
+  return (
+    <PageNotFound />
+  );
 }

@@ -17,7 +17,7 @@ export const MiniCart = () => {
   return (
     <>
       {cart.length ? (
-        <div className="absolute top-[102px] right-[0] z-[2] bg-white w-[450px] h-[420px] max-h-[420px] overflow-y-auto border border-gray-400 shadow-sm">
+        <div className="absolute top-25 right-0 z-2 bg-white w-112.5 h-105 max-h-105 overflow-y-auto border border-gray-400 shadow-sm">
           <div className={`${titleFont.className} flex flex-col antialiased`}>
             <Link
               href={"/cart"}

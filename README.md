@@ -10,9 +10,9 @@
 6. Ejecutar seed `npm run seed`
 7. Correr el proyecto `npm run dev`
 sudo chmod -R 755 postgres
-
+ npx prisma studio
 ## Correr en prod
 
 
-npx prisma migrate deploy --> base de datos push
+npx prisma migrate push --> base de datos push
 
